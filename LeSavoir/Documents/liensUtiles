@@ -1,2 +1,11 @@
 lien pour les icones
 http://www.icone-png.com/webmaster/fermer/2.php
+
+
+
+SELECT EP.class_desc AS PropertyOn, 
+    DB_NAME() AS DatabaseName, 
+    EP.name AS ExtendedPropertyDescription, 
+    EP.VALUE AS ExtendedPropertyValue 
+FROM sys.extended_properties AS EP 
+WHERE EP.name <> 'MS_Description' AND EP.class = 0
